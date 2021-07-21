@@ -12,7 +12,7 @@ class ProductTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.of.(contex).push(
+        Navigator.of(context).push(
           MaterialPageRoute(builder: (context) => ProductScreen(product))
         );
       },
