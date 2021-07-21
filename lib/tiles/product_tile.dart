@@ -54,10 +54,13 @@ class ProductTile extends StatelessWidget {
             children: <Widget>[
               Flexible( // serve para deixar a imagem e o texto no mesmo tamanho da tela, independente do dispositivo
                 flex: 1,
-                child: Image.network(
-                  product.images[0],
-                  fit: BoxFit.cover,
-                  height: 250.0,
+                child: AspectRatio(
+                  aspectRatio: 0.8,
+                  child: Image.network(
+                    product.images[0],
+                    fit: BoxFit.cover,
+                    height: 250.0,
+                  ),
                 ),
               ),
               Flexible(
