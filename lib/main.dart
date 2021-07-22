@@ -19,7 +19,7 @@ import 'package:loja_virtual/screens/login_screen.dart';
              primaryColor: Color.fromARGB(255, 4, 125, 141)
          ),
          debugShowCheckedModeBanner: false,
-         home: LoginScreen()
+         home: HomeScreen()
      );
    }
  }
