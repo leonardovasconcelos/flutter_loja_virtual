@@ -31,7 +31,7 @@ import 'models/user_model.dart';
                  debugShowCheckedModeBanner: false,
                  home: HomeScreen()
              ),
-           ),
+           );
          },
        ),
      );
