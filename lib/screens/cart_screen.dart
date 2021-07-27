@@ -65,7 +65,18 @@ class CartScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
-
+            );
+          } else{
+            return ListView(
+              children: <Widget>[
+                Column(
+                  children: model.products.map(
+                      (product){
+                        return CartTile(product);
+                      }
+                  ),
+                ),
+              ],
             );
           }
         },
