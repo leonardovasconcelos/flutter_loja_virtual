@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:loja_virtual/datas/cart_product.dart';
@@ -62,8 +63,29 @@ class CartModel extends Model {
   }
 
   void setCoupon(String couponCode, int discountPercentage){
-    this.couponCode;
-    this.discountPercentage;
+    this.couponCode = couponCode;
+    this.discountPercentage = discountPercentage;
+  }
+
+  void updatePrices(){
+    notifyListeners();
+  }
+
+  double getProductPrice(){
+    double price = 0.0;
+    for(CartProduct c in products){
+      if(c.productData != null)
+        price += c.quantity * c.productData.price;
+    }
+    return price;
+  }
+
+  double getDiscount(){
+    return getProductPrice() * (discountPercentage/100);
+  }
+
+  double getShipPrice(){
+    return 9.99;
   }
 
   void _loadCartItems() async {

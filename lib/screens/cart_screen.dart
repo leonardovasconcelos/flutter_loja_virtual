@@ -65,7 +65,7 @@ class CartScreen extends StatelessWidget {
             );
           } else if (model.products == null || model.products.length ==0){
             return Center(
-              child: Text("Nenhum produto no carrinho",
+              child: Text("Nenhum produto no carrinho!",
                 style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
