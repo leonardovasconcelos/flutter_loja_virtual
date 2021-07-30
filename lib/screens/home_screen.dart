@@ -35,6 +35,7 @@ class HomeScreen extends StatelessWidget {
             title: Text("Meus Pedidos"),
             centerTitle: true,
           ),
+          drawer: CustomDrawer(_pageController),
           body: OrdersTab(),
         ),
       ],
